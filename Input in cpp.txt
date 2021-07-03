@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+
+ void inputData();
+ 
+ void inputData()
+{
+       int a;
+       string b;
+       cin>>a;
+       cin>>b;
+       cout<<a<<" "<<b;
+      }
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        //function call
+        inputData();
+        
+    }
+}
+
+
+
+/*
+Input:
+a = 5
+b = Hello
+Output:
+5 Hello
+*/

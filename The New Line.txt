@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+
+void printNewLine();
+
+void printNewLine(){
+    
+
+    cout<<"Geeks"<<endl<<"for"<<endl<<"Geeks";
+    
+}
+
+int main(){
+    
+    //function call
+    printNewLine();
+    
+}
