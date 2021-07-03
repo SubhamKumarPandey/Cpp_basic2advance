@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+
+void bitWiseOperation(int, int, int);
+
+void bitWiseOperation(int a, int b, int c) {
+    
+int    d = a ^ a;
+cout<<d<<endl;
+int e = c ^ b;
+cout<<e<<endl;
+int f = a & b;
+cout<<f<<endl;
+int g = c | (a ^ a);
+cout<<g<<endl;
+e = ~e;
+cout<<e<<endl;
+}
+
+int main() {
+
+    int t;
+    cin >> t;
+
+    while (t--) {
+        int a, b, c;
+        cin >> a >> b >> c;
+
+        bitWiseOperation(a, b, c);
+    }
+
+    return 0;
+}
+
+/*
+
+Input:
+a = 4
+b = 8
+c = 2
+Output:
+0
+10
+0
+2
+-11
+
+*/

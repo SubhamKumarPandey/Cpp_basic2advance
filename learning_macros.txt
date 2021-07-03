@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+#define MULTI(a,b) (a*b)
+
+void macros(int a,int b);
+
+void macros(int a,int b)
+{
+    
+    cout<<a*b<<endl;
+}
+
+
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int a,b;
+	    
+	    //Input a and b
+	    cin>>a>>b; 
+	    
+	    //function call
+	    macros(a,b);
+	    
+	}
+	return 0;
+}
+
+/*
+Input:
+2
+5 6
+7 11
+
+Output:
+30
+77
+*/

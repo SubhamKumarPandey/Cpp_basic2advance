@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void logicOp(int a, int b);
+
+
+void logicOp(int a, int b)
+{
+    int c=a&&b;
+    int d=a||b;
+    int e=!a;
+    
+    cout<<c<<" "<<d<<" "<<e<<endl;
+}
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int a,b;
+	    cin>>a>>b;
+	    logicOp(a,b);
+	    
+	}
+	return 0;
+}
+
+/*
+Input:
+a = 6
+b = 7
+Output:
+1 1 0
+Explanation:
+a && b = 1
+a || b = 1
+!a = 0
+
+*/
