@@ -1,0 +1,56 @@
+#include <bits/stdc++.h>
+using namespace std;
+class Solution{
+    public:
+    void countOddEven(int arr[], int sizeof_array)
+    {
+        
+        int odd=0,even=0;
+        for(int i=0;i<sizeof_array;i++){
+            if(arr[i]%2==0){
+                even++;
+            }
+            else{
+                odd++;
+            }
+        }
+        cout<<odd<<" "<<even<<endl;
+       
+        
+    }
+};
+
+
+int main() {
+	
+	// Testcase input
+	int testcase;
+	cin >> testcase;
+	
+	while(testcase--){
+	    int sizeof_array;
+	    cin >> sizeof_array;
+	    
+	    int arr[sizeof_array];
+	    
+	    // Array elements input
+	    for(int i = 0; i < sizeof_array; i++){
+	        cin >> arr[i];
+	    }
+	    Solution ob;
+	    ob.countOddEven(arr, sizeof_array);
+	    
+	}
+	
+	return 0;
+}  
+
+
+/*
+Input:
+N = 5
+A[] = 1 2 3 4 5
+Output:
+3 2
+
+*/

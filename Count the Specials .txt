@@ -1,0 +1,64 @@
+#include <bits/stdc++.h>
+using namespace std;
+int countSpecials(int[], int, int);
+
+int countSpecials(int arr[], int sizeof_array, int K){
+
+    
+    
+     int hash[1001] = {0};
+    
+    int f = floor(sizeof_array/K), count = 0;
+ 
+    for(int i = 0;i<sizeof_array;i++){
+        hash[arr[i]]++;
+    }
+
+    for(int i = 0;i<sizeof_array;i++){
+        if(hash[arr[i]] == f){
+            count++;
+            hash[arr[i]]=-1;
+        }
+      
+    }
+
+    
+    
+    return count;
+    
+}
+int main() {
+	
+	// Testcase input
+	int testcase;
+	cin >> testcase;
+	
+	while(testcase--){
+	    
+	    int sizeof_array, K;
+	    cin >> sizeof_array >> K
+	    int arr[sizeof_array];
+	    
+	    for(int i = 0;i<sizeof_array;i++){
+	        cin >> arr[i];
+	    }
+	    
+	   
+	    cout << countSpecials(arr, sizeof_array, K) << endl;
+	    
+	}
+	
+	return 0;
+}
+
+/*
+Input:
+N = 5
+K = 2
+A[] = 1 4 1 2 4
+Output:
+2
+Explanation:
+In the given array, 1 and 4 occurs 
+floor(5/2) = 2 times. So count is 2.
+*/
