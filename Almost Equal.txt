@@ -1,0 +1,53 @@
+#include <bits/stdc++.h>
+using namespace std;
+class Solution{
+    public:
+    int countChars(string s1, string s2){
+        int hash[26] = {0};
+        for(int i = 0;i<s1.length();i++){
+            hash[s1[i]-'a']++;
+        }
+        for(int i = 0;i<s2.length();i++){
+            hash[s2[i]-'a']--;
+        }
+        
+        int count = 0;
+        for(int i = 0;i<26;i++){
+            if(hash[i] != 0){
+                count+=abs(hash[i]);
+            }
+        }
+        
+        return count;
+        
+    }
+};
+int main() {
+	
+	int testcase;
+	
+	cin >> testcase;
+	
+	while(testcase--){
+	    string s1, s2;
+	    cin >> s1 >> s2;
+	    Solution obj;
+	    cout << obj.countChars(s1, s2) << endl;
+	}
+	
+	return 0;
+}
+
+/*
+
+Input:
+s1 = madame
+s2 = madam
+Output:
+1
+Explanation:
+String s1 = madame, string s2 = madam. 
+character 'e' in first string needs to 
+be deleted to make s1 equal to s2.
+
+*/
